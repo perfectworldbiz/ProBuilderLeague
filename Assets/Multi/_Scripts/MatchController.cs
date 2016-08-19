@@ -5,6 +5,7 @@ using Photon;
 public class MatchController : PunBehaviour {
 
     public static MatchController match;
+    public bool debugLogs;
     public GameObject player;
 
     void Awake()
@@ -18,18 +19,23 @@ public class MatchController : PunBehaviour {
     }
 
     //player tells master that he hit something
-    public void TargetHit(int id)
+    public void TargetHit(int id, string name)
     {
-        photonView.RPC("Hit", PhotonTargets.MasterClient, id);
+        photonView.RPC("Hit", PhotonTargets.MasterClient, id, name);
     }
 
     //MasterClient only
     [PunRPC]
-    void Hit(int id)
+    void Hit(int id, string name)
     {
         PhotonView view = PhotonView.Find(id);
         //we have the photonview of the hit target, now we affect it
         //here would be code for checking if the hit claim was legit
-        view.RPC("Hit", PhotonTargets.AllBuffered);
+        if (view.transform.name == name) //in this case, the photonview is on hit object
+            view.RPC("Hit", PhotonTargets.AllBuffered);
+        else //in this case photonView manages a larger array of objects (is solo)
+        {
+            view.RPC("HitObject", PhotonTargets.AllBuffered, name);
+        }
     }
 }

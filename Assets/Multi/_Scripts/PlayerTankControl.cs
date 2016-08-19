@@ -13,8 +13,6 @@ public class PlayerTankControl : PunBehaviour{
     {
         rb = GetComponent<Rigidbody>();
         shoot = GetComponent<PlayerShooting>();
-        if (photonView.isMine)
-            InitializePlayer();
     }
 
     void Update()
@@ -37,19 +35,27 @@ public class PlayerTankControl : PunBehaviour{
             transform.position = Vector3.zero;
             transform.rotation = Quaternion.identity;
         }
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.R))
         {
             Vector3 rot = transform.rotation.eulerAngles;
-            rot.z = 0;
-            transform.Rotate(rot);
+            rot.x = 0;
+            transform.rotation = Quaternion.identity;
         }
         //input
         if (Input.GetButton("Fire1"))
             shoot.Shoot();
-    }
 
-    void InitializePlayer()
+    }
+    void OnGUI()
     {
-        transform.FindChild("Camera").gameObject.SetActive(true);
+        if (!MatchController.match.debugLogs)
+            return;
+        GUILayout.Label("Ping is " + PhotonNetwork.GetPing() + " and whole trip is " + PhotonNetwork.GetPing() * 2);
+        GUILayout.Label("WASD to move");
+        GUILayout.Label("SHIFT to fly");
+        GUILayout.Label("Left Mouse/LeftControl to shoot");
+        GUILayout.Label("R to flip upside down");
+        GUILayout.Label("SPACE to reset position");
+
     }
 }

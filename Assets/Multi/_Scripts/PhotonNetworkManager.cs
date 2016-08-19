@@ -11,7 +11,7 @@ public class PhotonNetworkManager : PunBehaviour
 {
     //PhotonNetwork variables
     public static PhotonNetworkManager net;
-    string Version = "probuilderleague01";
+    string Version = "probuilderleague02";
     public MenuController menu;
     private string roomName = ""; //if null or "" Photon will give this a GUID
     RoomInfo[] roomsList;
@@ -70,7 +70,6 @@ public class PhotonNetworkManager : PunBehaviour
         // generate a name for this player, if none is assigned yet
 
         PhotonNetwork.playerName = "ProBuilder" + Random.Range(0, 100);
-        roomName = "Serwer: " +PhotonNetwork.playerName;
 
         // if you wanted more debug out, turn this on:
         // PhotonNetwork.logLevel = NetworkLogLevel.Full;
@@ -78,7 +77,7 @@ public class PhotonNetworkManager : PunBehaviour
     
     public void CreateGame()
     {
-        PhotonNetwork.CreateRoom(roomName, new RoomOptions() { maxPlayers = 2 }, null);
+        PhotonNetwork.CreateRoom(roomName, new RoomOptions() { maxPlayers = 3 }, null);
         playerReady = false;
     }
     public void SearchGame(bool cond)

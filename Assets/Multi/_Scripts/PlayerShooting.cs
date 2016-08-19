@@ -51,7 +51,7 @@ public class PlayerShooting : PunBehaviour {
             hit = true;
             shootLine.SetPosition(1, shootHit.point);
             Instantiate(explosion, shootHit.point, Quaternion.identity);
-            MatchController.match.TargetHit(shootHit.transform.gameObject.GetComponent<PhotonView>().viewID);
+            MatchController.match.TargetHit(shootHit.transform.gameObject.GetComponentInParent<PhotonView>().viewID, shootHit.transform.name);
         }
         else
         {

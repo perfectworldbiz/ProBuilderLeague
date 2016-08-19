@@ -2,7 +2,7 @@
 using System.Collections;
 using Photon;
 using UnityEngine.UI;
-
+//old script from different project, do not use
 public class CubeBuilder : PunBehaviour
 {
     public bool TestAsServer = false;
@@ -61,9 +61,9 @@ public class CubeBuilder : PunBehaviour
         server.target = GameObject.Find("CubeCenter(Clone)").transform;
         server.distanceMin = (currentLayer * Mathf.Sqrt(3)) / 2 + 1;
         cubeSizeText.text = "Wielkość kostki: " + currentLayer;
-        GameObject client = GameObject.Find("ClientTEST(Clone)");
-        if(client != null)
-            client.GetComponent<Network_Setup>().NewPosition(Vector3.zero + new Vector3(currentLayer / 2, currentLayer / 2, currentLayer / 2) + new Vector3(0, 0, -currentLayer/2 -20));
+        //GameObject client = GameObject.Find("ClientTEST(Clone)");
+        //if(client != null)
+         //   client.GetComponent<Network_Setup>().NewPosition(Vector3.zero + new Vector3(currentLayer / 2, currentLayer / 2, currentLayer / 2) + new Vector3(0, 0, -currentLayer/2 -20));
 
     }
     public void RebuildCube()
