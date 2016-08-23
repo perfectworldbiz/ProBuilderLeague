@@ -11,7 +11,7 @@ public class PhotonNetworkManager : PunBehaviour
 {
     //PhotonNetwork variables
     public static PhotonNetworkManager net;
-    string Version = "probuilderleague02";
+    string Version = "probuilderleague03";
     public MenuController menu;
     private string roomName = ""; //if null or "" Photon will give this a GUID
     RoomInfo[] roomsList;

@@ -121,10 +121,14 @@
      <Compile Include="Assets\Multi\_Scripts\MenuController.cs" />
      <Compile Include="Assets\Multi\_Scripts\Network_Setup.cs" />
      <Compile Include="Assets\Multi\_Scripts\Network_Sync.cs" />
+     <Compile Include="Assets\Multi\_Scripts\NetworkedRigidbody.cs" />
      <Compile Include="Assets\Multi\_Scripts\PhotonNetworkManager.cs" />
      <Compile Include="Assets\Multi\_Scripts\PlayerShooting.cs" />
+     <Compile Include="Assets\Multi\_Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Multi\_Scripts\PlayerTankControl.cs" />
+     <Compile Include="Assets\Multi\_Scripts\SimpleUI.cs" />
      <Compile Include="Assets\Multi\_Scripts\Small Utility Scripts\DestroyByTime.cs" />
+     <Compile Include="Assets\Multi\_Scripts\Small Utility Scripts\FPS_Counter.cs" />
      <Compile Include="Assets\Multi\_Scripts\Small Utility Scripts\MouseOrbitImproved.cs" />
      <Compile Include="Assets\Multi\_Scripts\Small Utility Scripts\Rotator.cs" />
      <Compile Include="Assets\Multi\_Scripts\TargetPractice.cs" />
