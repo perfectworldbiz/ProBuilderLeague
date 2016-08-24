@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProBuilderLeague.CSharp.Plugins", "ProBuilderLeague.CSharp.Plugins.csproj", "{569A0392-074C-0658-8499-BC324CFF29DB}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProBuilderLeague.CSharp", "ProBuilderLeague.CSharp.csproj", "{44016979-1477-0D93-993B-37DCA56352FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProBuilderLeague.CSharp.Editor", "ProBuilderLeague.CSharp.Editor.csproj", "{CDDA9D6C-18C7-7219-391E-E414F9BC74B3}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{569A0392-074C-0658-8499-BC324CFF29DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569A0392-074C-0658-8499-BC324CFF29DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569A0392-074C-0658-8499-BC324CFF29DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569A0392-074C-0658-8499-BC324CFF29DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{44016979-1477-0D93-993B-37DCA56352FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{44016979-1477-0D93-993B-37DCA56352FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44016979-1477-0D93-993B-37DCA56352FE}.Release|Any CPU.ActiveCfg = Release|Any CPU

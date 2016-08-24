@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Multi/_Scenes/map_multiplayer.unity
+- path: Assets/Multi/_Scenes/main.unity
   isLoaded: 1
   isActive: 1
