@@ -18,6 +18,7 @@ public class PlayerTankControl : PunBehaviour{
         rb = GetComponent<Rigidbody>();
         shoot = GetComponent<PlayerShooting>();
         turret = GetComponent<PlayerShooting>().turret;
+        PhotonNetwork.networkingPeer.TrafficStatsEnabled = true;
     }
 
     void Update()
@@ -67,15 +68,26 @@ public class PlayerTankControl : PunBehaviour{
     {
         if (MatchController.match.debugLogs)
         {
-            GUILayout.Label("Ping: " + PhotonNetwork.GetPing() + " Pong: " + PhotonNetwork.GetPing() * 2);
             GUILayout.Label("FPS: " + System.Math.Round(FPS_Counter.fpsCounter.fps, 1));
+            /*if (Camera.current != null)
+                GUILayout.Label("CamPos: " + Camera.current.transform.position);*/
+            GUILayout.Label("CamTarget: " + shoot.turretTarget);
+
+            //Network Information
+            NetworkingPeer npeer = PhotonNetwork.networkingPeer;
+            GUILayout.Label("Network Information");
             if (PhotonNetwork.isMasterClient)
                 GUILayout.Label("Master");
             else
                 GUILayout.Label("Client");
-            if (Camera.current != null)
-                GUILayout.Label("CamPos: " + Camera.current.transform.position);
-            GUILayout.Label("CamTarget: " + shoot.turretTarget);
+            GUILayout.Label("Ping: " + PhotonNetwork.GetPing());
+            GUILayout.Label("BytesIn: " + npeer.BytesIn + " AvgSizePerPacketInc: " + npeer.TrafficStatsIncoming.TotalPacketBytes/npeer.TrafficStatsIncoming.TotalPacketCount);
+            GUILayout.Label("BytesOut: " + npeer.BytesOut + " AvgSizePerPacketOut: " + npeer.TrafficStatsOutgoing.TotalPacketBytes/npeer.TrafficStatsOutgoing.TotalPacketCount);
+            GUILayout.Label("TrafficStatsIncoming: " + npeer.TrafficStatsIncoming);
+            GUILayout.Label("TrafficStatsOutgoing: " + npeer.TrafficStatsOutgoing);
+            Debug.Log(" BytesCurrentDispatch: " + npeer.ByteCountCurrentDispatch);
+            Debug.Log(" BytesLastOperation: " + npeer.ByteCountLastOperation);
+
         }
         if (MatchController.match.showControls && this.showControls)
         {

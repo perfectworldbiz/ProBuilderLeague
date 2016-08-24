@@ -126,6 +126,9 @@
      <Compile Include="Assets\Multi\_Scripts\PlayerShooting.cs" />
      <Compile Include="Assets\Multi\_Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Multi\_Scripts\PlayerTankControl.cs" />
+     <Compile Include="Assets\Multi\_Scripts\SQL\KodSQL_Unity.cs" />
+     <Compile Include="Assets\Multi\_Scripts\SQL\SQL_Controller.cs" />
+     <Compile Include="Assets\Multi\_Scripts\SQL\SimpleSQL_UI.cs" />
      <Compile Include="Assets\Multi\_Scripts\SimpleUI.cs" />
      <Compile Include="Assets\Multi\_Scripts\Small Utility Scripts\DestroyByTime.cs" />
      <Compile Include="Assets\Multi\_Scripts\Small Utility Scripts\FPS_Counter.cs" />
@@ -152,8 +155,14 @@
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/Marcin/Documents/ProBuilderLeague/Assets/Multi/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
+ <Reference Include="System.Data">
+ <HintPath>C:/Users/Marcin/Documents/ProBuilderLeague/Assets/Multi/Plugins/System.Data.dll</HintPath>
+ </Reference>
  <Reference Include="websocket-sharp">
  <HintPath>C:/Users/Marcin/Documents/ProBuilderLeague/Assets/Multi/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ </Reference>
+ <Reference Include="System.EnterpriseServices">
+ <HintPath>C:/Users/Marcin/Documents/ProBuilderLeague/Assets/Multi/Plugins/System.EnterpriseServices.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -93,6 +93,9 @@
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/Marcin/Documents/ProBuilderLeague/Assets/Multi/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
+ <Reference Include="System.Data">
+ <HintPath>C:/Users/Marcin/Documents/ProBuilderLeague/Assets/Multi/Plugins/System.Data.dll</HintPath>
+ </Reference>
  <Reference Include="websocket-sharp">
  <HintPath>C:/Users/Marcin/Documents/ProBuilderLeague/Assets/Multi/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
@@ -101,6 +104,9 @@
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.EnterpriseServices">
+ <HintPath>C:/Users/Marcin/Documents/ProBuilderLeague/Assets/Multi/Plugins/System.EnterpriseServices.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
